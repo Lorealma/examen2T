@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane prefHeight="846.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examendi2t.HelloController">
+   <center>
+      <SplitPane dividerPositions="0.21221662468513852" prefHeight="472.0" prefWidth="764.0">
+        <items>
+            <VBox maxWidth="200.0" prefHeight="548.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Nombre:" />
+                  <TextField fx:id="tf_nombre">
+                     <tooltip>
+                        <Tooltip text="Introduce el nombre del Alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="Apellido:" />
+                  <TextField fx:id="tf_apellido">
+                     <tooltip>
+                        <Tooltip text="Introduce el apellido del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="Correo:" />
+                  <TextField fx:id="tf_correo">
+                     <tooltip>
+                        <Tooltip text="Introduce el e-mail del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="DNI:" />
+                  <TextField fx:id="tf_dni">
+                     <tooltip>
+                        <Tooltip text="Introduce el dni del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="Teléfono:" />
+                  <TextField fx:id="tf_telefono">
+                     <tooltip>
+                        <Tooltip text="Introduce el teléfono del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="Fecha de nacimiento:" />
+                  <DatePicker fx:id="dp_fechaNacimiento">
+                     <tooltip>
+                        <Tooltip text="Escoge la fecha de nacimiento del alumno" />
+                     </tooltip>
+                  </DatePicker>
+                  <Label text="Localidad:" />
+                  <TextField fx:id="tf_localidad">
+                     <tooltip>
+                        <Tooltip text="Introduce la localidad del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="AD:" />
+                  <TextField fx:id="tf_ad">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de acceso a datos" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="SGE:" />
+                  <TextField fx:id="tf_sge">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de sistemas de gestión empresarial" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="PMDM:" />
+                  <TextField fx:id="tf_pmdm">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de programación multimedia" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="PSP:" />
+                  <TextField fx:id="tf_psp">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de programación de servicios y procesos" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="EIE:" />
+                  <TextField fx:id="tf_eie">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de empresas e iniciativa emprendedora" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="DI:" />
+                  <TextField fx:id="tf_di">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de desarrollo de interfaces" />
+                     </tooltip>
+                  </TextField>
+                  <Label text="HLC:" />
+                  <TextField fx:id="tf_hlc">
+                     <tooltip>
+                        <Tooltip text="Introduce la nota de horas de libre configuración" />
+                     </tooltip>
+                  </TextField>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                     <children>
+                        <Button fx:id="btn_introducir" mnemonicParsing="false" onAction="#introducirAlumno" text="Introducir alumno">
+                           <tooltip>
+                              <Tooltip text="Pulsa para introducir alumno" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="btn_descargar" mnemonicParsing="false" onAction="#descargarNotas" text="Descargar notas">
+                           <tooltip>
+                              <Tooltip text="Pulsa para descargar un documento pdf con las notas del alumno" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="btn_salir" mnemonicParsing="false" onAction="#salir" text="Salir">
+                           <tooltip>
+                              <Tooltip text="Pulsa para salir de la ventana" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </FlowPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="188.0" prefWidth="532.0">
+               <children>
+                  <TableView fx:id="tv_tabla" prefHeight="863.0" prefWidth="792.0">
+                    <columns>
+                      <TableColumn fx:id="col_nombre" prefWidth="75.0" text="Nombre" />
+                      <TableColumn fx:id="col_apellido" prefWidth="75.0" text="Apellido" />
+                        <TableColumn fx:id="col_correo" prefWidth="75.0" text="Correo" />
+                        <TableColumn fx:id="col_dni" prefWidth="75.0" text="DNI" />
+                        <TableColumn fx:id="col_telefono" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="col_fechaNacimiento" prefWidth="75.0" text="Fecha Nacimiento" />
+                        <TableColumn fx:id="col_localidad" prefWidth="75.0" text="Localidad" />
+                        <TableColumn fx:id="col_ad" prefWidth="75.0" text="AD" />
+                        <TableColumn fx:id="col_sge" prefWidth="75.0" text="SGE" />
+                        <TableColumn fx:id="col_pmdm" prefWidth="75.0" text="PMDM" />
+                        <TableColumn fx:id="col_psp" prefWidth="75.0" text="PSP" />
+                        <TableColumn fx:id="col_eie" prefWidth="75.0" text="EIE" />
+                        <TableColumn fx:id="col_di" prefWidth="75.0" text="DI" />
+                        <TableColumn fx:id="col_hlc" prefWidth="75.0" text="HLC" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
